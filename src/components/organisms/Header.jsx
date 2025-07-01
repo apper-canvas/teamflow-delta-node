@@ -1,7 +1,7 @@
-import React from "react";
-import ApperIcon from "@/components/ApperIcon";
-import Button from "@/components/atoms/Button";
-import NotificationDropdown from "@/components/molecules/NotificationDropdown";
+import React from 'react';
+import ApperIcon from '@/components/ApperIcon';
+import Button from '@/components/atoms/Button';
+
 const Header = ({ onToggleSidebar, isSidebarOpen }) => {
   return (
     <header className="bg-white border-b border-gray-200 px-4 py-4 lg:px-6">
@@ -24,9 +24,12 @@ const Header = ({ onToggleSidebar, isSidebarOpen }) => {
           </div>
         </div>
         
-<div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4">
           <div className="hidden sm:flex items-center space-x-3">
-            <NotificationDropdown />
+            <div className="relative">
+              <ApperIcon name="Bell" size={20} className="text-gray-600" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
+            </div>
           </div>
           
           <div className="flex items-center space-x-3">
