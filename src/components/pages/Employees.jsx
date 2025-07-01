@@ -97,21 +97,17 @@ const Employees = () => {
     }
   };
 
-  const handleFormSubmit = async (formData) => {
-    try {
-      if (editingEmployee) {
-        const updatedEmployee = await employeeService.update(editingEmployee.Id, formData);
-        setEmployees(prev => prev.map(emp => emp.Id === editingEmployee.Id ? updatedEmployee : emp));
-      } else {
-        const newEmployee = await employeeService.create(formData);
-        setEmployees(prev => [...prev, newEmployee]);
-      }
-      
-      setShowForm(false);
-      setEditingEmployee(null);
-    } catch (error) {
-      throw error;
+const handleFormSubmit = async (formData) => {
+    if (editingEmployee) {
+      const updatedEmployee = await employeeService.update(editingEmployee.Id, formData);
+      setEmployees(prev => prev.map(emp => emp.Id === editingEmployee.Id ? updatedEmployee : emp));
+    } else {
+      const newEmployee = await employeeService.create(formData);
+      setEmployees(prev => [...prev, newEmployee]);
     }
+    
+    setShowForm(false);
+    setEditingEmployee(null);
   };
 
   const handleFormCancel = () => {
