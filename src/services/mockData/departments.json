@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1,
+    "name": "Engineering",
+    "managerId": 3,
+    "employeeCount": 4,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 2,
+    "name": "Product",
+    "managerId": 2,
+    "employeeCount": 1,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 3,
+    "name": "Design",
+    "managerId": 8,
+    "employeeCount": 2,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 4,
+    "name": "Human Resources",
+    "managerId": 5,
+    "employeeCount": 1,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 5,
+    "name": "Marketing",
+    "managerId": 7,
+    "employeeCount": 1,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 6,
+    "name": "Sales",
+    "managerId": 12,
+    "employeeCount": 2,
+    "parentDepartmentId": null
+  },
+  {
+    "Id": 7,
+    "name": "Analytics",
+    "managerId": 11,
+    "employeeCount": 1,
+    "parentDepartmentId": null
+  }
+]

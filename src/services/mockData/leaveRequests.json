@@ -1,0 +1,102 @@
+[
+  {
+    "Id": 1,
+    "employeeId": 1,
+    "type": "Vacation",
+    "startDate": "2024-02-15",
+    "endDate": "2024-02-22",
+    "reason": "Family vacation to Hawaii",
+    "status": "Approved",
+    "approvedBy": "Emily Davis"
+  },
+  {
+    "Id": 2,
+    "employeeId": 4,
+    "type": "Sick",
+    "startDate": "2024-01-28",
+    "endDate": "2024-02-02",
+    "reason": "Recovery from flu",
+    "status": "Approved",
+    "approvedBy": "Robert Taylor"
+  },
+  {
+    "Id": 3,
+    "employeeId": 6,
+    "type": "Personal",
+    "startDate": "2024-02-20",
+    "endDate": "2024-02-21",
+    "reason": "Moving to new apartment",
+    "status": "Pending",
+    "approvedBy": null
+  },
+  {
+    "Id": 4,
+    "employeeId": 9,
+    "type": "Vacation",
+    "startDate": "2024-03-10",
+    "endDate": "2024-03-17",
+    "reason": "Spring break with family",
+    "status": "Pending",
+    "approvedBy": null
+  },
+  {
+    "Id": 5,
+    "employeeId": 10,
+    "type": "Sick",
+    "startDate": "2024-01-15",
+    "endDate": "2024-01-16",
+    "reason": "Medical appointment",
+    "status": "Rejected",
+    "approvedBy": "Thomas Jones"
+  },
+  {
+    "Id": 6,
+    "employeeId": 2,
+    "type": "Personal",
+    "startDate": "2024-02-25",
+    "endDate": "2024-02-26",
+    "reason": "Wedding anniversary celebration",
+    "status": "Approved",
+    "approvedBy": "HR Admin"
+  },
+  {
+    "Id": 7,
+    "employeeId": 7,
+    "type": "Vacation",
+    "startDate": "2024-04-01",
+    "endDate": "2024-04-05",
+    "reason": "Conference and training",
+    "status": "Pending",
+    "approvedBy": null
+  },
+  {
+    "Id": 8,
+    "employeeId": 11,
+    "type": "Maternity",
+    "startDate": "2024-03-01",
+    "endDate": "2024-05-01",
+    "reason": "Maternity leave",
+    "status": "Approved",
+    "approvedBy": "HR Admin"
+  },
+  {
+    "Id": 9,
+    "employeeId": 12,
+    "type": "Vacation",
+    "startDate": "2024-02-12",
+    "endDate": "2024-02-14",
+    "reason": "Long weekend getaway",
+    "status": "Approved",
+    "approvedBy": "HR Admin"
+  },
+  {
+    "Id": 10,
+    "employeeId": 3,
+    "type": "Personal",
+    "startDate": "2024-02-28",
+    "endDate": "2024-02-29",
+    "reason": "Home repairs",
+    "status": "Pending",
+    "approvedBy": null
+  }
+]
