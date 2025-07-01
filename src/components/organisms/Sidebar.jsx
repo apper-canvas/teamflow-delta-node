@@ -10,7 +10,8 @@ const Sidebar = ({ isOpen, onClose }) => {
     { name: 'Dashboard', path: '/dashboard', icon: 'LayoutDashboard' },
     { name: 'Employees', path: '/employees', icon: 'Users' },
     { name: 'Departments', path: '/departments', icon: 'Building2' },
-    { name: 'Leave Management', path: '/leave', icon: 'Calendar' },
+{ name: 'Leave Management', path: '/leave', icon: 'Calendar' },
+    { name: 'Performance Reviews', path: '/performance-reviews', icon: 'UserCheck' },
     { name: 'Reports', path: '/reports', icon: 'BarChart3' },
   ];
 

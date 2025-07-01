@@ -275,9 +275,147 @@ const EmployeeDetail = () => {
         ) : (
           <div className="text-center py-8">
             <ApperIcon name="Calendar" size={48} className="text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-500">No leave history found</p>
+<p className="text-gray-500">No leave history found</p>
           </div>
         )}
+      </motion.div>
+
+      {/* Performance Review Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl font-semibold text-gray-900 font-display flex items-center">
+            <ApperIcon name="Star" size={20} className="mr-2" />
+            Performance Review
+          </h2>
+          <Button
+            variant="primary"
+            icon="Plus"
+            onClick={() => navigate('/performance-reviews', { state: { employeeId: employee.Id } })}
+          >
+            Add Review
+          </Button>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          {/* Current Performance Rating */}
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h3 className="text-sm font-medium text-gray-700 mb-3">Overall Performance</h3>
+            <div className="flex items-center space-x-2 mb-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <ApperIcon
+                  key={star}
+                  name="Star"
+                  size={20}
+                  className={`${star <= 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                />
+              ))}
+              <span className="text-sm text-gray-600 ml-2">4.0/5.0</span>
+            </div>
+            <p className="text-xs text-gray-500">Based on latest review</p>
+          </div>
+
+          {/* Skills Progress */}
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h3 className="text-sm font-medium text-gray-700 mb-3">Key Skills</h3>
+            <div className="space-y-3">
+              <div>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-xs text-gray-600">Technical Skills</span>
+                  <span className="text-xs text-gray-600">85%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-500 h-2 rounded-full" style={{ width: '85%' }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-xs text-gray-600">Communication</span>
+                  <span className="text-xs text-gray-600">90%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-xs text-gray-600">Leadership</span>
+                  <span className="text-xs text-gray-600">75%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-500 h-2 rounded-full" style={{ width: '75%' }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recent Reviews */}
+        <div>
+          <h3 className="text-lg font-medium text-gray-900 mb-4">Recent Reviews</h3>
+          <div className="space-y-4">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-1">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <ApperIcon
+                        key={star}
+                        name="Star"
+                        size={16}
+                        className={`${star <= 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-900">Q3 2024 Review</span>
+                </div>
+                <span className="text-sm text-gray-500">3 months ago</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-2">
+                Excellent performance this quarter. Shows strong technical skills and great collaboration with the team. 
+                Areas for improvement include taking more initiative in cross-functional projects.
+              </p>
+              <p className="text-xs text-gray-500">Reviewed by: Emily Davis</p>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-1">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <ApperIcon
+                        key={star}
+                        name="Star"
+                        size={16}
+                        className={`${star <= 4 ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm font-medium text-gray-900">Q2 2024 Review</span>
+                </div>
+                <span className="text-sm text-gray-500">6 months ago</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-2">
+                Solid performance with consistent delivery of high-quality work. Good problem-solving skills 
+                and reliable team member. Continue developing leadership skills.
+              </p>
+              <p className="text-xs text-gray-500">Reviewed by: Emily Davis</p>
+            </div>
+          </div>
+          
+          <div className="mt-4 text-center">
+            <Button
+              variant="outline"
+              onClick={() => navigate('/performance-reviews', { state: { employeeId: employee.Id } })}
+            >
+              View All Reviews
+            </Button>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
