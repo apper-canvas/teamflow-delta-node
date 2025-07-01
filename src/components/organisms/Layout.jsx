@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Header from '@/components/organisms/Header';
 import Sidebar from '@/components/organisms/Sidebar';
-
 const Layout = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
